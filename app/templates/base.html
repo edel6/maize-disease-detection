@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Maize Leaf Classifier</title>
+</head>
+<body>
+    <header>
+        <h1>Maize Leaf Classifier</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main.index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+        {% if request.endpoint != 'main.index' %}
+        <nav>
+            <a href="{{ url_for('main.index') }}">Go Back to Home Page</a>
+        </nav>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Maize Leaf Classifier</p>
+    </footer>
+</body>
+</html>
