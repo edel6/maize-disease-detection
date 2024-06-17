@@ -1,1 +1,0 @@
-# maize-disease-detection
