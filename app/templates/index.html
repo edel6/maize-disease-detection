@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Select Classification Type</h2>
+<ul>
+    <li><a href="{{ url_for('main.classify', disease='mdm') }}">Healthy vs. Maize Downy Mildew</a></li>
+    <li><a href="{{ url_for('main.classify', disease='sclb') }}">Healthy vs. SCLB</a></li>
+    <li><a href="{{ url_for('main.classify', disease='nclb') }}">Healthy vs. NCLB</a></li>
+</ul>
+{% endblock %}
